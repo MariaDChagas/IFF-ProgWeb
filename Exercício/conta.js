@@ -1,0 +1,52 @@
+var n1 = document.querySelector("input#n1")
+var n2 = document.querySelector("input#n2")
+var res = document.querySelector("p#res")
+
+var soma = document.querySelector("input#soma")
+soma.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) + parseFloat(n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var menos = document.querySelector("input#menos")
+menos.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) - parseFloat(n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var mult = document.querySelector("input#mult")
+mult.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) * parseFloat(n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var div = document.createElement("input#div")
+div.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) / parseFloat(n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var pot = document.createElement("input#pot")
+pot.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) ** parseFloat(n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var raiz1 = document.createElement("input#raiz1")
+raiz1.addEventListener("click", () => {
+    res.innerHTML = ("Resultado:")
+    result = parseFloat(n1.value) ** (1/2)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var raiz2 = document.createElement("input#raiz2")
+raiz2.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) ** (1/n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
+var resto = document.createElement("input#resto")
+resto.addEventListener("click", () => {
+    res.innerHTML = ("Resultado: ")
+    result = parseFloat(n1.value) % parseFloat(n2.value)
+    res.insertAdjacentHTML('beforeend', result)
+})
