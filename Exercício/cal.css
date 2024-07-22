@@ -1,4 +1,7 @@
 :root{
-    --cor: blue
+    --cor: gray 
     
+}
+body {
+    background-color: var(--cor);
 }
