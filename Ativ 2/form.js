@@ -1,46 +1,59 @@
 function ola () {
-    console.log('Olá Mundo!');
+    console.log('Hello, world!')
 }
 ola()
 
-function somar (n1,n2) {
+function somarerrado (n1,n2) {
     console.log (`A soma é: ${n1} + ${n2} = ${n1+n2}`)
 }
-somar(8,10)
+somarerrado(2,5)
 
-function multiplic (n1,n2) {
-    console.log (`A multiplicação é: ${n1} * ${n2} = ${n1*n2}`)
+function somaArg(...args) {
+    return args.reduce((n1, n2) => n1 + n2)
 }
-multiplic (5,10)
+console.log(`A soma dos argumentos é: ${somaArg(1, 2)}`)           
 
+function multiplic (n1,n2 = 10) {
+    console.log (`A multiplicação é: ${n1} x ${n2} = ${n1*n2}`)
+}
+multiplic(5)
 
 //usando o bind
-function utilizando (){
+function exemplo () {
     console.log(this)
 } 
-var usodometodo = {
-    nome: "Bind"
+var names = {
+    nome: "Duda"
 }
-utilizando = utilizando.bind(usodometodo)
-utilizando()
+exemplo = exemplo.bind(names)
+exemplo()
 
 //usando declaração de função
-function ddf () {
-    console.log ('Usando declaração de função.')
+function decla () {
+    console.log ('Declarando função!')
 }
-ddf()
+decla()
 
 //usando expressão de função
-exp = function (){
-    console.log('Usando expressão de função.')
+expre = function () {
+    console.log('Expressando função!')
 }
-exp()
+expre()
 
-function fatorial (s){
-    if (s == 0 || s ==1) {
+function fat(m) {
+    if (m == 0 || m == 1) {
         return 1
     } else {
-        return s * fatorial(s-1)
+        return m * fat(m-1)
     }
 }
-console.log('Fatorial', fatorial(20))
+console.log('O fatorial é:',fat(8))
+
+function mont () {
+    let non = 'Maria '
+    this.getnon = function () {
+        return non = non + 'Chagas'
+    }
+}
+const ser = new mont ()
+console.log(ser.getnon())
